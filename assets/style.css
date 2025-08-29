@@ -100,7 +100,7 @@ img {padding-top:10px;}
 .banner {
     width: 100%;
     height: 170px;
-    background: url('cropped-cropped-uku-to-right-sw-title-2.jpg') no-repeat center center;
+    background: url('cug.png') no-repeat center center;
     background-size: cover;
     cursor: default;
 }
@@ -111,7 +111,7 @@ img {padding-top:10px;}
     margin: 20px 0;
 }
 
-#clearSearch {
+#clearSearch, #XmasButton {
     padding: 8px 15px;
     margin-left: 5px;
     font-size: 16px;
@@ -252,7 +252,7 @@ a.link-nochange:hover {
   color: #0077cc;
 }
 
-#learn, #history, #song {padding-top: 40px;}
+#learn, #history, #song, #perform {padding-top: 40px;}
 
 /* === Hero two-column layout === */
 .hero {
