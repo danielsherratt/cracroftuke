@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <title>Events - Sou'West Strummers</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="navbar">
+	<span class="menu-icon">&#9776;</span>
+        <div class="nav-links">
+        <a class="nav-item" href="index.html">Home</a>
+        <a class="nav-item" href="songs.html">Songs</a>
+		<a class="nav-item" href="events.html">Events</a>
+		<a class="nav-item" href="library.html">Library</a>
+
+		</div>
+    </div>
+    <div class="banner"></div>
+	<h1><i class="fa-solid fa-thumbtack"></i> Events</h1>
+<div class="event-container">
+</div>
+
+<h2><i class="fa-solid fa-check"></i> Completed Events</h2>
+
+<div class="event-container">
+<div class="event">
+<h2><i class="fa-solid fa-snowflake"></i> 2025 Darfield Midwinter Strum</h2>
+<i class="fa-regular fa-clock"></i> Saturday, 5 July 2025, 1pm - 4:30pm
+<br><i class="fa-solid fa-location-dot"></i> Darfield Recreation Centre, 92 North Terrace, Darfield
+<br><br>
+<a href="#">2025 Event Info and Pictures</a>
+<br>
+</div>
+</div>
+
+ <script>
+        $(document).ready(function(){
+   const $menu = $('.menu-icon'),
+            $nav  = $('.nav-links');
+
+      $menu.on('click', e => {
+        e.stopPropagation();
+        $nav.toggleClass('active');
+        // swap icon
+        $menu.html( $nav.hasClass('active') ? '&#10005;' : '&#9776;');
+      });
+
+      // close if click outside
+      $(document).on('click', e => {
+        if ($nav.hasClass('active') && !$(e.target).closest('.nav-links, .menu-icon').length) {
+          $nav.removeClass('active');
+          $menu.html('&#9776;');
+        }
+      });
+        });
+    </script>
+
+</body>
+</html>
